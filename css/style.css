@@ -632,8 +632,9 @@ a.active {
 ==================================================*/
 
 #contact {
-    padding: 100px 0;
+    /*padding: 100px 0;*/
     background: url(../img/contact-bg.jpg);
+    height: 100vh;
 }
 
 #contact-form input,
