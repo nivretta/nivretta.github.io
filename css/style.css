@@ -1,7 +1,6 @@
 /*
-* Resume template
-* Created by : Ahmed Essa
-* website : www.ahmedessa.net
+* Website template created by : Ahmed Essa www.ahmedessa.net
+* Edits to template by Nivretta Thatra, thatniv.com
 */
 
 
@@ -250,7 +249,7 @@ nav li a {
     text-transform: uppercase;
     letter-spacing: 2px;
     color: #444;
-    font-size: 11px;
+    font-size: 13px;
     font-weight: bold;
 }
 
@@ -579,10 +578,11 @@ a.active {
     text-align: center;
 }
 
-.portfolio_item img {
+/*.portfolio_item img {
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
 }
+*/
 
 .portfolio-padding {
     padding: 50px 0;
@@ -633,7 +633,7 @@ a.active {
 
 #contact {
     padding: 100px 0;
-    background: #f3f3f3
+    background: url(../img/contact-bg.JPG)
 }
 
 #contact-form input,
