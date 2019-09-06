@@ -635,6 +635,7 @@ a.active {
     padding: 100px 0;
     /*background: #f3f3f3;*/
     background: url(../img/contact-bg.jpg);
+    background-size: cover;
     height: 100vh;
 }
 
