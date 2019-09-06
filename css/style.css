@@ -634,8 +634,7 @@ a.active {
 #contact {
     padding: 100px 0;
     /*background: #f3f3f3;*/
-    background: url(../img/home-bg.JPG);
-    background-size: cover;
+    background: url(../img/contact-bg.jpg);
     height: 100vh;
 }
 
