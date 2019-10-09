@@ -500,7 +500,7 @@ a.active {
     left: 0px;
     height: 100%;
     width: 100%;
-    background-color: #425BB5;
+    background-color: #101010;
     -webkit-transform: translateY(100%);
     transform: translateY(100%);
     opacity: 0;
