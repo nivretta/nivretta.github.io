@@ -46,20 +46,10 @@ h4 {
     font-family: 'Lato', sans-serif;
     text-transform: capitalize;
     color: #444;
-    font-size: 11px;
+    font-size: 40px;
     font-weight: bold;
 }
 
-h4:before {
-    position: absolute;
-    width: 30px;
-    left: -40px;
-    content: "";
-    display: block;
-    height: 2px;
-    background: #425BB5;
-    top: 9px;
-}
 
 
 /* General
