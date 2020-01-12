@@ -404,11 +404,12 @@ a.active {
     margin: 0 auto;
     text-align: center;
 }
-
+/*
 .portfolio_item img {
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
 }
+*/
 
 .portfolio-padding {
     padding: 50px 0;
