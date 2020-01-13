@@ -65,6 +65,10 @@ body {
     font-family: 'Open Sans', sans-serif;
     font-size: 14px;
     line-height: 24px;
+    background-image: url(../img/home-bg.jpg);
+    background-color: #DDDDDD;
+    background-size: cover;
+    height: 100vh;
 }
 
 .size-50 {
@@ -219,9 +223,7 @@ body {
 ==================================================*/
 
 #projects {
-    background: url(../img/home-bg.jpg);
-    background-size: cover;
-    height: 100vh;
+    
 }
 
 
@@ -310,4 +312,11 @@ body {
   position: absolute;
   top: 8px;
   left: 16px;
+}
+
+/*contact section
+==================================================*/
+
+#footer {
+    
 }
