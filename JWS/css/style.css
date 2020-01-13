@@ -238,14 +238,18 @@ body {
     left: 0px;
     height: 100%;
     width: 100%;
-    opacity: 1;
+    background-color: #cccccc;
+    opacity: 0;
+    color: #cccccc;
 }
 
 .portfolio_item .portfolio_item_hover .item_info {
     text-align: center;
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 50%; 
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
     padding: 10px;
     width: 100%;
     font-weight: bold;
@@ -254,14 +258,14 @@ body {
 .portfolio_item .portfolio_item_hover .item_info span {
     display: block;
     color: #fff;
-    font-size: 18px;
+    font-size: 16px;
     opacity: 0;
 }
 
 .portfolio_item .portfolio_item_hover .item_info em {
     font-style: normal;
     display: inline-block;
-    background-color: #425BB5;
+    background-color: #cccccc;
     padding: 5px 20px;
     color: #fff;
     margin-top: 10px;
@@ -271,17 +275,15 @@ body {
 }
 
 .portfolio_item:hover .portfolio_item_hover {
-    opacity: 0;
+    opacity: 1;
 }
 
 .portfolio_item:hover .item_info em,
 .portfolio_item:hover .item_info span {
-    opacity: 0; 
+    opacity: 1;
 }
 
-
-/*
-.portfolio_item img {
+/*.portfolio_item img {
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
 }
@@ -294,4 +296,18 @@ body {
 .portfolio-inner {
     padding-bottom: 0 !important;
     padding-top: 55px;
+}
+
+/* Container holding the image and the text */
+.squarebox {
+  position: relative;
+  text-align: top-left;
+  color: black;
+}
+
+/* Top left text */
+.top-left {
+  position: absolute;
+  top: 8px;
+  left: 16px;
 }
