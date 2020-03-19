@@ -35,6 +35,8 @@ body {
     line-height: 24px;
     background: url(../img/welcomepg.jpg);
     background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
     background-color: #FFE656;
     height: 100vh;
 }
@@ -55,6 +57,8 @@ body {
     position: fixed;
     background: url(../img/welcomepg.jpg);
     background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
     height: 100vh;
     top: 0;
     left: 0;
@@ -192,12 +196,16 @@ body {
 ==================================================*/
 
 #button{
- position: absolute;
+    width: 144px;
+    height: 113px;
+    position: absolute;
     top: 50%;
     left: 50%;
-    margin-left: -75.5px;
-    margin-top: -88.5px;
+    margin-left: -67px;
+    margin-top: -122.5px;
 }
+
+ 
 
 /*removing scroll bars
 ==================================================*/
