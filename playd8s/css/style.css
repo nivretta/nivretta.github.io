@@ -33,7 +33,7 @@ body {
     font-family: 'Open Sans', sans-serif;
     font-size: 14px;
     line-height: 24px;
-    background: url(../img/welcomepg.jpg);
+    background: url(../img/welcomepgNOSIGN.jpg);
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
@@ -55,7 +55,7 @@ body {
 
 #preloader {
     position: fixed;
-    background: url(../img/welcomepg.jpg);
+    background: url(../img/welcomepgNOSIGN.jpg);
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
