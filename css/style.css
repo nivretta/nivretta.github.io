@@ -67,7 +67,7 @@ body {
     font-family: 'Open Sans', sans-serif;
     font-size: 14px;
     line-height: 24px;
-    background-image: url(/img/home-bg.jpg);
+    background-image: url(img/home-bg.jpg);
     background-color: #DDDDDD;
     background-size: cover;
     height: 100vh;
