@@ -106,6 +106,24 @@ $(document).ready(function () {
     //animatedModal
     $("#demo01,#demo02,#demo03,#demo04,#demo05,#demo06,#demo07,#demo08,#demo09").animatedModal();
 
+//pop open image script from ChatGPT
+    // Open the modal
+    function openModal() {
+        document.getElementById('animatedModal').style.display = 'block';
+    }
+
+    // Close the modal
+    document.getElementById('btn-close-modal').addEventListener('click', function() {
+        document.getElementById('animatedModal').style.display = 'none';
+    });
+
+    // Close modal if clicked outside the modal content
+    window.addEventListener('click', function(event) {
+        if (event.target === document.getElementById('animatedModal')) {
+            document.getElementById('animatedModal').style.display = 'none';
+        }
+    });
+
     // Contact Form 	
 
     // validate contact form
