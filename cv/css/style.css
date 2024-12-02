@@ -728,3 +728,43 @@ fieldset {
         font-size: 10px;
     }
 }
+
+/*Pop up modal chatgpt
+==========================*/
+<!-- Optional CSS for smooth transition and appearance -->
+<style>
+    .popup-modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        z-index: 1000;
+        overflow: auto;
+    }
+
+    .modal-content {
+        position: relative;
+        margin: auto;
+        max-width: 80%;
+        top: 20%;
+        text-align: center;
+    }
+
+    .close-animatedModal {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        color: white;
+        font-size: 30px;
+        cursor: pointer;
+        z-index: 2000;
+    }
+
+    .img-responsive {
+        max-width: 100%;
+        height: auto;
+    }
+</style>
