@@ -16,12 +16,12 @@ $(document).ready(function () {
     //animatedModal
     $("#demo01,#demo02,#demo03,#demo04,#demo05,#demo06,#demo07,#demo08,#demo09").animatedModal();
 
-    // Initialize animatedModal if needed
-    $("#portfolioModal").animatedModal();
+     // Initially ensure the modal is hidden
+    $("#portfolioModal").removeClass("active").hide();
 
     // Open the modal when the portfolio item is clicked
     $(".portfolio_item").click(function() {
-        // Show the modal
+        // Show the modal with the 'active' class
         $("#portfolioModal").fadeIn().addClass("active");
     });
 
