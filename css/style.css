@@ -413,3 +413,73 @@ a.active {
 #footer {
     
 }
+
+/*Pop up modal chatgpt
+==========================*/
+.popup-modal {
+    display: none; /* Hidden initially */
+    position: fixed; /* Fixed position to cover the viewport */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: transparent; /* Transparent background for the overlay */
+    z-index: 9999; /* Ensure it's on top of other elements */
+    justify-content: center; /* Center the modal content horizontally */
+    align-items: center; /* Center the modal content vertically */
+    overflow: auto;  /* Ensures modal content is scrollable if needed */
+    pointer-events: none; /* Disable all interactions until the modal is active */
+}
+
+/* When the modal is active, allow interaction with the modal content */
+.popup-modal.active {
+    pointer-events: auto; /* Enable clicks inside modal when active */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Soft shadow around the modal */
+    border-radius: 10px;
+    width: 80%;  /* Make modal width responsive */
+    max-width: 1000px;  /* Max width for larger screens */
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    pointer-events: auto; /* Make sure modal content is clickable */
+}
+
+/* Image inside the modal */
+.modal-content img {
+    width: 100%;
+    max-height: 80vh;  /* Limit image height */
+    object-fit: contain;  /* Keeps image's aspect ratio */
+    margin-bottom: 20px;  /* Adds space below the image */
+}
+
+/* Close button */
+.close-popup-modal {
+    font-size: 30px;
+    color: #333;
+    opacity: 1;  /* Always visible by default */
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    transition: opacity 0.3s ease-in-out;  /* Smooth transition */
+    z-index: 100000;
+}
+
+.modal-backdrop {
+    display: none;
+    z-index: 1040 !important;
+}
+
+.modal-content {
+    margin: 2px auto;
+    z-index: 1100 !important;
+}
