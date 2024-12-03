@@ -731,36 +731,55 @@ fieldset {
 
 /*Pop up modal chatgpt
 ==========================*/
-.modal-content {
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0);
-    border: none;
-}
-
 .popup-modal {
-    background: #fff;
-}
-
-.close-popup-modal {
-    float: right;
-    margin: 20px;
-    font-size: 22px;
-    opacity: 0;
-    cursor: pointer;
-    -webkit-transition: all .3s;
-    transition: all .3s;
-    -webkit-transition-delay: .6s;
-    transition-delay: .6s;
+    display: none; /* Hidden initially */
     position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;  /* Ensure modal content is scrollable if too large */
+    pointer-events: none; /* Allow clicks outside modal to interact with page */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Soft shadow around the modal */
+    border-radius: 10px;
+    width: 80%;  /* Make modal width responsive */
+    max-width: 1000px;  /* Max width for larger screens */
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    pointer-events: auto; /* Make sure modal content is clickable */
+}
+
+/* Image inside the modal */
+.modal-content img {
+    width: 100%;
+    max-height: 80vh;  /* Limit image height */
+    object-fit: contain;  /* Keeps image's aspect ratio */
+    margin-bottom: 20px;  /* Adds space below the image */
+}
+
+/* Close button */
+.close-popup-modal {
+    font-size: 30px;
+    color: #333;
+    opacity: 1;  /* Always visible by default */
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    transition: opacity 0.3s ease-in-out;  /* Smooth transition */
     z-index: 100000;
-    right: 14px;
-}
-
-.animatedModal-on .close-popup-modal {
-    opacity: 1;
-}
-
-.modal-content h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 40px;
-    line-height: 50px;
 }
