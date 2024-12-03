@@ -743,7 +743,11 @@ fieldset {
     justify-content: center;
     align-items: center;
     overflow: auto;  /* Ensure modal content is scrollable if too large */
-    pointer-events: none; /* Allow clicks outside modal to interact with page */
+    pointer-events: none; /* Disable clicks outside modal */
+}
+
+.popup-modal.active {
+    pointer-events: auto; /* Enable clicks inside modal when active */
 }
 
 /* Modal Content */
