@@ -13,6 +13,8 @@ $(window).load(function () {
 $(document).ready(function () {
     "use strict";
 
+    $("01,02,03,04").portfolioModal();
+    
      // Initially ensure the modal is hidden
     $("#portfolioModal").removeClass("active").hide();
 
