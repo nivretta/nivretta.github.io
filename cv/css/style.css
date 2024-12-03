@@ -731,7 +731,22 @@ fieldset {
 
 /*Pop up modal chatgpt
 ==========================*/
+.popup-modal {
+    display: none; /* Hidden initially */
+    position: fixed; /* Fixed position to cover the viewport */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: transparent; /* Transparent background for the overlay */
+    z-index: 9999; /* Ensure it's on top of other elements */
+    justify-content: center; /* Center the modal content horizontally */
+    align-items: center; /* Center the modal content vertically */
+    overflow: auto;  /* Ensures modal content is scrollable if needed */
+    pointer-events: none; /* Disable all interactions until the modal is active */
+}
 
+/* When the modal is active, allow interaction with the modal content */
 .popup-modal.active {
     pointer-events: auto; /* Enable clicks inside modal when active */
 }
