@@ -104,21 +104,24 @@ $(document).ready(function () {
     });
 
 //pop open image script from ChatGPT
-     // Open the modal
-function openModal() {
-    document.getElementById('animatedModal').style.display = 'block';
-}
+    document.addEventListener("DOMContentLoaded", function() {
+    // Define the openModal function to be called on the link click
+    window.openModal = function(event) {
+        event.preventDefault();  // Prevent default link behavior
+        document.getElementById('animatedModal').style.display = 'block';  // Show the modal
+    };
 
-// Close the modal
-document.getElementById('btn-close-modal').addEventListener('click', function() {
-    document.getElementById('animatedModal').style.display = 'none';
-});
-
-// Close modal if clicked outside the modal content
-window.addEventListener('click', function(event) {
-    if (event.target === document.getElementById('animatedModal')) {
+    // Close the modal when clicking the close button
+    document.getElementById('btn-close-modal').addEventListener('click', function() {
         document.getElementById('animatedModal').style.display = 'none';
-    }
+    });
+
+    // Close modal if clicked outside the modal content
+    window.addEventListener('click', function(event) {
+        if (event.target === document.getElementById('animatedModal')) {
+            document.getElementById('animatedModal').style.display = 'none';
+        }
+    });
 });
     
     // Contact Form 	
