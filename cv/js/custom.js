@@ -13,7 +13,7 @@ $(window).load(function () {
 $(document).ready(function () {
     "use strict";
 
-    // Initially ensure all modals are hidden
+  // Initially ensure all modals are hidden
     $(".popup-modal").removeClass("active").hide();
 
     // Open the modal when a portfolio item is clicked
@@ -25,8 +25,8 @@ $(document).ready(function () {
     });
 
     // Close the modal when clicking the close button
-    $('#closeModal').on('click', function() {
-        $('.popup-modal').fadeOut().removeClass('active');
+    $('.close-popup-modal').on('click', function() {
+        $(this).closest('.popup-modal').fadeOut().removeClass('active');
     });
 
     // Close modal if clicked outside the modal content
