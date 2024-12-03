@@ -731,52 +731,37 @@ fieldset {
 
 /*Pop up modal chatgpt
 ==========================*/
-/* Modal overlay */
-#animatedModal {
-    display: none;               /* Hidden by default */
-    position: fixed;             /* Fixed position to cover the entire screen */
+/* Ensure modal is hidden initially */
+.popup-modal {
+    display: none;
+    position: fixed;
     top: 0;
     left: 0;
-    width: 100%;                 /* Full width to cover the screen */
-    height: 100%;                /* Full height to cover the screen */
-    background-color: rgba(0, 0, 0, 0.5);  /* Semi-transparent background */
-    z-index: 9999;               /* Ensure it appears above other content */
-    justify-content: center;     /* Center content horizontally */
-    align-items: center;         /* Center content vertically */
-    overflow: hidden;            /* Hide overflow */
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* semi-transparent background */
+    z-index: 9999;
 }
 
-/* Modal content (the actual image container) */
+.popup-modal.active {
+    display: block;  /* Make it visible when 'active' class is added */
+}
+
+/* Modal content styling */
 .modal-content {
-    position: relative;
-    background-color: white;
-    padding: 0;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  /* Optional shadow for better visual appeal */
-    display: inline-block;        /* Allow image to retain its natural size */
-}
-
-/* Close button inside the modal */
-#btn-close-modal {
     position: absolute;
-    top: 10px;
-    right: 10px;
-    background: transparent;
-    border: none;
-    font-size: 20px;
-    color: #333;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    max-width: 600px;
+    width: 80%;
+    border-radius: 8px;
+}
+
+/* Close button style */
+#closeModal {
+    margin-top: 20px;
     cursor: pointer;
-}
-
-/* Optional: Animations or transitions for a smoother effect */
-#animatedModal {
-    transition: opacity 0.3s ease, visibility 0s 0.3s; /* Fade effect */
-}
-
-/* When modal is visible */
-#animatedModal.show {
-    display: flex;
-    opacity: 1;
-    visibility: visible;
-    transition: opacity 0.3s ease; /* Fade in effect */
 }
