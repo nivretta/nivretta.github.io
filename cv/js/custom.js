@@ -13,31 +13,31 @@ $(window).load(function () {
 $(document).ready(function () {
     "use strict";
 
-    $("01,02,03,04").portfolioModal();
-    
-     // Initially ensure the modal is hidden
-    $("#portfolioModal").removeClass("active").hide();
+    // Initially ensure all modals are hidden
+    $(".popup-modal").removeClass("active").hide();
 
-    // Open the modal when the portfolio item is clicked
+    // Open the modal when a portfolio item is clicked
     $(".portfolio_item").click(function() {
-        // Show the modal with the 'active' class
-        $("#portfolioModal").fadeIn().addClass("active");
+        // Get the target modal from the clicked item’s data-target attribute
+        var targetModal = $(this).data('target');
+        // Show the corresponding modal
+        $(targetModal).fadeIn().addClass("active");
     });
 
     // Close the modal when clicking the close button
     $('#closeModal').on('click', function() {
-        $('#portfolioModal').fadeOut().removeClass('active');
+        $('.popup-modal').fadeOut().removeClass('active');
     });
 
     // Close modal if clicked outside the modal content
     $(window).on('click', function(event) {
-        if ($(event.target).is('#portfolioModal')) {
-            $('#portfolioModal').fadeOut().removeClass('active');
+        if ($(event.target).hasClass('popup-modal')) {
+            $(event.target).fadeOut().removeClass('active');
         }
     });
 
     // Prevent modal close if clicking inside the modal content
-    $('#portfolioModal .modal-content').on('click', function(event) {
+    $('.popup-modal .modal-content').on('click', function(event) {
         event.stopPropagation();  // Prevent click from propagating to the background
     });
     
