@@ -731,7 +731,7 @@ fieldset {
 
 /*Pop up modal chatgpt
 ==========================*/
-/* Initially hide all modals */
+/* Main Modal Overlay */
 .popup-modal {
     display: none;
     position: fixed;
@@ -739,49 +739,68 @@ fieldset {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.7);  /* Semi-transparent background */
+    background: rgba(0, 0, 0, 0.7);  /* Semi-transparent black background */
     z-index: 9999;
     justify-content: center;
     align-items: center;
-    overflow: auto;  /* Ensure that if the modal is too large, it can be scrolled */
+    overflow: auto;  /* Ensures modal content is scrollable if too large */
 }
 
-/* Modal content style */
-.popup-modal .modal-content {
+/* Modal Content */
+.modal-content {
     background-color: white;
-    border-radius: 8px;
-    max-width: 60%;  /* Modal width should be responsive, 90% of the screen width */
-    max-height: 60%; /* Modal height should be responsive, 90% of the screen height */
-    overflow: hidden;
-    position: relative;
-    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Soft shadow around the modal */
+    border-radius: 10px;
+    width: 80%;  /* Make modal width responsive */
+    max-width: 1000px;  /* Max width for larger screens */
+    padding: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
 }
 
-/* Ensures the image inside the modal is centered */
-.popup-modal .modal-content img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;  /* Ensures the image is resized without distortion */
-    margin: auto;
+/* Image inside the modal */
+.modal-content img {
+    width: 100%;
+    max-height: 80vh;  /* Limit image height */
+    object-fit: contain;  /* Keeps image's aspect ratio */
+    margin-bottom: 20px;  /* Adds space below the image */
 }
 
-/* Close button styling */
-#closeModal {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background-color: #ff5c5c;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
+/* Close button */
+.close-popup-modal {
+    font-size: 30px;
+    color: #333;
+    opacity: 0;
     cursor: pointer;
-    border-radius: 5px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    transition: all 0.3s ease-in-out;
+    z-index: 100000;
 }
 
-#closeModal:hover {
-    background-color: #e74c3c;
+.animatedModal-on .close-popup-modal {
+    opacity: 1;
+}
+
+/* Text inside modal */
+.modal-content h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    line-height: 40px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Modal's description text */
+.modal-content p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #666;
+    text-align: center;
+    margin-top: 15px;
 }
