@@ -760,3 +760,42 @@ fieldset {
     max-height: 100%;
 }
 
+/* Modal overlay */
+#animatedModal {
+    display: none;               /* Hidden by default */
+    position: fixed;             /* Fixed position to cover the whole screen */
+    top: 0;                      /* Align to the top of the page */
+    left: 0;                     /* Align to the left of the page */
+    width: 100%;                 /* Full width */
+    height: 100%;                /* Full height */
+    background-color: rgba(0, 0, 0, 0.5);  /* Semi-transparent background */
+    z-index: 9999;               /* Ensure it appears above other content */
+    justify-content: center;     /* Center content horizontally */
+    align-items: center;         /* Center content vertically */
+}
+
+
+/* Close button inside the modal */
+#btn-close-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    color: #333;
+    cursor: pointer;
+}
+
+/* Optional: Animations or transitions for a smoother effect */
+#animatedModal {
+    transition: opacity 0.3s ease, visibility 0s 0.3s; /* Fade effect */
+}
+
+/* When modal is visible */
+#animatedModal.show {
+    display: flex;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s ease; /* Fade in effect */
+}
