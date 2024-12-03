@@ -12,7 +12,10 @@ $(window).load(function () {
 
 $(document).ready(function () {
     "use strict";
-    
+
+    //animatedModal
+    $("#demo01,#demo02,#demo03,#demo04,#demo05,#demo06,#demo07,#demo08,#demo09").animatedModal();
+
   // Pop open image script
     window.openModal = function(event) {
         event.preventDefault();  // Prevent default link behavior
