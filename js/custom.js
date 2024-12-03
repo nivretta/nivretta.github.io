@@ -13,6 +13,37 @@ $(window).load(function () {
 $(document).ready(function () {
     "use strict";
 
+      // Initially ensure all modals are hidden
+    $(".popup-modal").removeClass("active").hide();
+
+    // Open the modal when a portfolio item is clicked
+    $(".portfolio_item").click(function() {
+        // Get the target modal from the clicked item’s data-target attribute
+        var targetModal = $(this).data('target');
+        // Show the corresponding modal
+        $(targetModal).fadeIn().addClass("active");
+    });
+
+    // Close the modal when clicking the close button
+    $('.close-popup-modal').on('click', function() {
+        $(this).closest('.popup-modal').fadeOut().removeClass('active');
+    });
+
+    // Close modal if clicked outside the modal content
+    $(window).on('click', function(event) {
+        if ($(event.target).hasClass('popup-modal')) {
+            $(event.target).fadeOut().removeClass('active');
+        }
+    });
+
+    // Prevent modal close if clicking inside the modal content
+    $('.popup-modal .modal-content').on('click', function(event) {
+        event.stopPropagation();  // Prevent click from propagating to the background
+    });
+
+    //places modal directly at the top of the body element.
+    $(".popup-modal").prependTo("body");
+
     // scroll menu
     var sections = $('.section'),
         nav = $('.navbar-fixed-top,footer'),
