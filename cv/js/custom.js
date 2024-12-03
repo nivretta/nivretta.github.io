@@ -40,6 +40,9 @@ $(document).ready(function () {
     $('.popup-modal .modal-content').on('click', function(event) {
         event.stopPropagation();  // Prevent click from propagating to the background
     });
+
+    //places modal directly at the top of the body element.
+    $(".popup-modal").prependTo("body");
     
     // scroll menu
     var sections = $('.section'),
