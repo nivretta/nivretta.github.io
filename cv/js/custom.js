@@ -16,6 +16,12 @@ $(document).ready(function () {
     //animatedModal
     $("#demo01,#demo02,#demo03,#demo04,#demo05,#demo06,#demo07,#demo08,#demo09").animatedModal();
 
+    // Open the modal when the portfolio item is clicked
+    $(".portfolio_item").click(function() {
+        // Add the 'active' class to show the modal
+        $("#portfolioModal").addClass("active");
+    });
+    
   // Pop open image script
     window.openModal = function(event) {
         event.preventDefault();  // Prevent default link behavior
