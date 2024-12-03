@@ -16,36 +16,31 @@ $(document).ready(function () {
     //animatedModal
     $("#demo01,#demo02,#demo03,#demo04,#demo05,#demo06,#demo07,#demo08,#demo09").animatedModal();
 
+    // Initialize animatedModal if needed
+    $("#portfolioModal").animatedModal();
+
     // Open the modal when the portfolio item is clicked
     $(".portfolio_item").click(function() {
-        // Add the 'active' class to show the modal
-        $("#portfolioModal").addClass("active");
+        // Show the modal
+        $("#portfolioModal").fadeIn().addClass("active");
     });
-    
-  // Pop open image script
-    window.openModal = function(event) {
-        event.preventDefault();  // Prevent default link behavior
-        $('#animatedModal').fadeIn().addClass('show');  // Show and add 'show' class
-    };
 
     // Close the modal when clicking the close button
-    $('#btn-close-modal').on('click', function() {
-        $('#animatedModal').fadeOut().removeClass('show');  // Hide and remove 'show' class
+    $('#closeModal').on('click', function() {
+        $('#portfolioModal').fadeOut().removeClass('active');
     });
 
     // Close modal if clicked outside the modal content
     $(window).on('click', function(event) {
-        if ($(event.target).is('#animatedModal')) {
-            $('#animatedModal').fadeOut().removeClass('show');  // Hide and remove 'show' class
+        if ($(event.target).is('#portfolioModal')) {
+            $('#portfolioModal').fadeOut().removeClass('active');
         }
     });
 
     // Prevent modal close if clicking inside the modal content
-    $('#animatedModal .modal-content').on('click', function(event) {
+    $('#portfolioModal .modal-content').on('click', function(event) {
         event.stopPropagation();  // Prevent click from propagating to the background
     });
-
-  
     
     // scroll menu
     var sections = $('.section'),
