@@ -731,6 +731,7 @@ fieldset {
 
 /*Pop up modal chatgpt
 ==========================*/
+/* Modal overlay */
 #animatedModal {
     display: none;               /* Hidden by default */
     position: fixed;             /* Fixed position to cover the entire screen */
@@ -742,6 +743,7 @@ fieldset {
     z-index: 9999;               /* Ensure it appears above other content */
     justify-content: center;     /* Center content horizontally */
     align-items: center;         /* Center content vertically */
+    overflow: hidden;            /* Hide overflow */
 }
 
 /* Modal content (the actual image container) */
