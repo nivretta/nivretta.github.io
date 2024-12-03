@@ -731,20 +731,6 @@ fieldset {
 
 /*Pop up modal chatgpt
 ==========================*/
-.popup-modal {
-    display: none; /* Hidden initially */
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
-    z-index: 9999;
-    justify-content: center;
-    align-items: center;
-    overflow: auto;  /* Ensure modal content is scrollable if too large */
-    pointer-events: none; /* Disable clicks outside modal */
-}
 
 .popup-modal.active {
     pointer-events: auto; /* Enable clicks inside modal when active */
