@@ -731,8 +731,6 @@ fieldset {
 
 /*Pop up modal chatgpt
 ==========================*/
-<!-- Optional CSS for smooth transition and appearance -->
-<style>
     .popup-modal {
         display: none;
         position: fixed;
@@ -767,4 +765,3 @@ fieldset {
         max-width: 100%;
         height: auto;
     }
-</style>
