@@ -13,22 +13,27 @@ $(window).load(function () {
 $(document).ready(function () {
     "use strict";
     
-  // pop open image script
+  // Pop open image script
     window.openModal = function(event) {
         event.preventDefault();  // Prevent default link behavior
-        $('#animatedModal').fadeIn();  // Show the modal
+        $('#animatedModal').fadeIn().addClass('show');  // Show and add 'show' class
     };
 
-    $ // Close the modal when clicking the close button
+    // Close the modal when clicking the close button
     $('#btn-close-modal').on('click', function() {
-        $('#animatedModal').fadeOut();  // Hide the modal
+        $('#animatedModal').fadeOut().removeClass('show');  // Hide and remove 'show' class
     });
 
     // Close modal if clicked outside the modal content
     $(window).on('click', function(event) {
         if ($(event.target).is('#animatedModal')) {
-            $('#animatedModal').fadeOut();  // Hide the modal
+            $('#animatedModal').fadeOut().removeClass('show');  // Hide and remove 'show' class
         }
+    });
+
+    // Prevent modal close if clicking inside the modal content
+    $('#animatedModal .modal-content').on('click', function(event) {
+        event.stopPropagation();  // Prevent click from propagating to the background
     });
 
   
