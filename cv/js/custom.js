@@ -19,17 +19,19 @@ $(document).ready(function () {
         $('#animatedModal').fadeIn();  // Show the modal
     };
 
-    // Close the modal when clicking the close button
-    $('#btn-close-modal').on('click', function() {
-        $('#animatedModal').fadeOut();  // Hide the modal
-    });
-
-    // Close modal if clicked outside the modal content
+      // Close modal if clicked outside the modal content
     $(window).on('click', function(event) {
         if ($(event.target).is('#animatedModal')) {
             $('#animatedModal').fadeOut();  // Hide the modal
         }
     });
+
+    // Close the modal when clicking the close button
+    $('#btn-close-modal').on('click', function() {
+        $('#animatedModal').fadeOut();  // Hide the modal
+    });
+
+  
     
     // scroll menu
     var sections = $('.section'),
